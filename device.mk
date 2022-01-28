@@ -113,21 +113,9 @@ PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library
-
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbthost_if
-
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
 
 # Display/Graphics
 PRODUCT_PACKAGES += \
@@ -149,10 +137,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.6.vendor \
     vendor.display.config@1.7.vendor \
     vendor.display.config@1.8.vendor
-
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -176,9 +160,7 @@ PRODUCT_PACKAGES += \
 
  # FM
 PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio
+    libqcomfm_jni
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -344,13 +326,6 @@ PRODUCT_PACKAGES += \
 # Sensor Configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
-
-# Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # Thermal
 PRODUCT_PACKAGES += \
