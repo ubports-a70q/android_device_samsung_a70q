@@ -386,3 +386,8 @@ PRODUCT_PACKAGES += \
 # HFD
 PRODUCT_PACKAGES += \
     libhfd_api
+
+# Rootfs overlays
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/70-android.rules:system/halium/lib/udev/rules.d/70-android.rules \
+    $(LOCAL_PATH)/ubuntu/android.conf:system/halium/etc/ubuntu-touch-session.d/android.conf
